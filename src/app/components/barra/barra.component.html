@@ -15,7 +15,7 @@
           >
             Menu
           </h5>
-          <button
+          <!-- <button
             type="button"
             data-drawer-hide="drawer-navigation"
             aria-controls="drawer-navigation"
@@ -36,7 +36,7 @@
               ></path>
             </svg>
             <span class="sr-only">Close menu</span>
-          </button>
+          </button> -->
           <li>
             <a
               routerLink="/"
@@ -181,9 +181,8 @@
     </aside>
   </mat-sidenav>
   <mat-sidenav-content #hasBackdrop>
-    <div data-dial-init class="fixed end-6 bottom-6 group">
+    <div data-dial-init class="fixed end-6 bottom-6 group z-10">
       <button
-        *ngIf="!drawer.opened"
         (click)="drawer.toggle()"
         type="button"
         data-dial-toggle="speed-dial-menu-default"
@@ -210,13 +209,6 @@
       </button>
     </div>
 
-    <!-- <button
-      *ngIf="!drawer.opened"
-      class="boton-flotante"
-      (click)="drawer.toggle()"
-    >
-      CLICK
-    </button> -->
     <router-outlet></router-outlet
   ></mat-sidenav-content>
 </mat-sidenav-container>
